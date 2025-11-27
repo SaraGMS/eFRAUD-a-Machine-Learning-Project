@@ -295,9 +295,9 @@ In fraud detection, **Recall** is critical (detecting all possible frauds), but 
 
 ### Mejor Modelo / Best Model
 
-🥇 **[Nombre del Modelo - ej. XGBoost Classifier]**
+🥇 **[XGBoost Classifier]**
 
-#### Hiperparámetros Óptimos
+#### Hiperparámetros Óptimos / Ideal hyperparameters
 
 ```python
 {
@@ -309,7 +309,7 @@ In fraud detection, **Recall** is critical (detecting all possible frauds), but 
 }
 ```
 
-#### Métricas en Test Set
+#### Métricas en Test Set / Test Set Scores
 
 | Métrica | Valor |
 |---------|-------|
@@ -351,9 +351,9 @@ Top 3 features más importantes / Top 3 most important features:
 
 ### Visualizaciones / Visualizations
 
-![Confusion Matrix](docs/confusion_matrix.png)
-![ROC Curve](docs/roc_curve.png)
-![Feature Importance](docs/feature_importance.png)
+<img width="2214" height="1769" alt="confusion_matrix" src="https://github.com/user-attachments/assets/ba79ea9c-3340-4e98-abb5-d1790767d4f2" />
+<img width="2370" height="1769" alt="roc_curve" src="https://github.com/user-attachments/assets/112ee7b9-ea6e-443a-983a-7bcd8173ffa4" />
+<img width="2969" height="2370" alt="feature_importance" src="https://github.com/user-attachments/assets/de5efa71-7424-4023-a169-7fc555e3df16" />
 
 ---
 
