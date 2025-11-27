@@ -242,9 +242,15 @@ The app will open in `http://localhost:8501`
 ### 2. Feature Engineering
 
 - Creación de nuevas features / New features creation:
-  - `balance_diff_orig`: Diferencia de balances en origen / Difference in origin balances
-  - `balance_diff_dest`: Diferencia de balances en destino / Difference in destination balances
-  - `amount_to_balance_ratio`: Ratio monto/balance / Ratio amount/balance
+  - transaction_hour
+  - transaction_day_of_week
+  - transaction_day_of_month
+  - transaction_month
+  - transaction_is_weekend
+  - account_age_days
+  - account_age_months
+  - days_until_card_expires
+  - card_is_expired
 
 - Codificación de variables categóricas / Categorical variables codification (Label Encoding / One-Hot)
 - Normalización de variables numéricas / Normalization of numerical variables
@@ -344,9 +350,9 @@ In fraud detection, **Recall** is critical (detecting all possible frauds), but 
 
 Top 3 features más importantes / Top 3 most important features:
 
-1. `amount` - Monto de la transacción / Transaction's amount
-2. `oldbalanceOrg` - Balance anterior origen / previous balance of origin
-3. `newbalanceOrig` - Nuevo balance origen / new balance of origin
+1. mcc_encoded
+2. merchant_state_encoded
+3. zip_encoded
    
 
 ### Visualizaciones / Visualizations
