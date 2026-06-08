@@ -1,465 +1,347 @@
-# 🔍 eFRAUD: a Machine Learning Project
+🧠 eFRAUD — a Machine Learning Project
+Fraud Detection in Financial Transactions using Machine Learning
+📋 Índice / Table of Contents
+Resumen Ejecutivo / Executive Summary
 
-Detección de Fraude en Transacciones Financieras / Fraud Detection in Financial Transactions
+Descripción del Proyecto / Project Description
 
-<div align="center">
+Requisitos / Requirements
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-orange.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
-![Status](https://img.shields.io/badge/Status-En%20Desarrollo-yellow.svg)
+Instalación / Installation
 
-</div>
+Uso / Usage
 
----
+Datos / Data
 
-## 📋 Índice / Table of Contents
+Metodología / Methodology
 
-- [Resumen Ejecutivo / Executive Summary](#-resumen-ejecutivo--executive-summary)
-- [Descripción del Proyecto / Project Description](#-descripción-del-proyecto--project-description)
-- [Requisitos / Requirements](#-requisitos--requirements)
-- [Instalación / Installation](#-instalación--installation)
-- [Uso / Usage](#-uso--usage)
-- [Datos / Data](#-datos--data)
-- [Metodología / Methodology](#-metodología--methodology)
-- [Resultados / Results](#-resultados--results)
-- [Aplicación Web / Web App](#-aplicación-web--web-app)
-- [Autora / Author](#-autora--author)
+Resultados / Results
 
----
+Aplicación Web / Web App
 
-## 📝 Resumen Ejecutivo / Executive Summary
+Aprendizajes y Conclusiones / Learnings & Conclusions
 
-### Español
+Autora / Author
 
-Este proyecto de detección de fraude en transacciones financieras tiene como objetivo identificar automáticamente operaciones fraudulentas utilizando machine learning. Se trabajó con datos reales/anonimizados, altamente desbalanceados (<2% fraude), aplicando limpieza, ingeniería de variables y modelos supervisados y no supervisados. El modelo final (XGBoost/LightGBM) logra un ROC-AUC >0.90, detectando la mayoría de fraudes con pocos falsos positivos. El análisis no supervisado (KMeans) respalda los hallazgos. Se recomienda actualizar y monitorizar el sistema periódicamente.
+Licencia / License
 
-### English
+📝 1. Resumen Ejecutivo / Executive Summary
+Español
+Este proyecto desarrolla un sistema de detección de fraude en transacciones financieras utilizando técnicas de machine learning.
+Se trabaja con datos reales/anonimizados, altamente desbalanceados (<10% fraude), aplicando:
 
-This fraud detection project aims to automatically identify fraudulent financial transactions using machine learning. We worked with real/anonymized, highly imbalanced data (<2% fraud), applying cleaning, feature engineering, and both supervised and unsupervised models. The final model (XGBoost/LightGBM) achieves ROC-AUC >0.90, detecting most frauds with few false positives. Unsupervised analysis (KMeans) supports the findings. Regular updates and monitoring are recommended.
+Limpieza y exploración de datos
 
----
+Ingeniería de variables
 
-## 🎯 Descripción del Proyecto / Project Description
+Modelos supervisados y no supervisados
 
-### Español
+Optimización de hiperparámetros
 
-Desarrollar un sistema automatizado para la detección de fraude en transacciones financieras, identificando patrones sospechosos y clasificando operaciones como legítimas o fraudulentas mediante técnicas avanzadas de machine learning.
+Balanceo de clases (SMOTE)
 
-**Objetivos:**
-- Entrenar múltiples modelos de ML (mínimo 5 supervisados + 1 no supervisado)
-- Optimizar hiperparámetros (GridSearch, pipelines)
-- Alta precisión y bajo falso positivo
-- Aplicación web interactiva (Streamlit)
-- Documentación profesional
+Aplicación web interactiva (Streamlit)
 
-**Hipótesis:**
-> Existen patrones en las transacciones que permiten identificar fraudes con modelos de machine learning más eficaces que reglas simples.
+El modelo final (XGBoost) obtiene:
 
-### English
+Precision: 93%
 
-Develop an automated system for fraud detection in financial transactions, identifying suspicious patterns and classifying operations as legitimate or fraudulent using advanced machine learning techniques.
+Recall: 80%
 
-**Objectives:**
-- Train multiple ML models (at least 5 supervised + 1 unsupervised)
-- Hyperparameter optimization (GridSearch, pipelines)
+F1-score: 86%
 
----
+ROC-AUC: 0.6739
 
-## 🔧 Requisitos / Requirements
+El análisis no supervisado (KMeans) respalda los patrones detectados.
 
-### Tecnologías Principales / Main technologies
+English
+This project builds an automated fraud detection system using machine learning.
+We work with real/anonymized, highly imbalanced data (<10% fraud), applying:
 
-- **Python 3.9+**
-- **Pandas** - Manipulación de datos / Data management
-- **NumPy** - Operaciones numéricas / Numerical operations
-- **Scikit-learn** - Modelos de ML / Machine Learning models
-- **XGBoost / LightGBM** - Modelos avanzados de boosting / Boosting advanced models
-- **Imbalanced-learn** - Manejo de clases desbalanceadas (SMOTE) / Managemend of unbalanced classes (SMOTE)
-- **Streamlit** - Aplicación web interactiva / Interactive web app
-- **Plotly / Matplotlib / Seaborn** - Visualizaciones / Visualizations
+Data cleaning and EDA
 
-### Hardware Recomendado
+Feature engineering
 
-- **RAM:** Mínimo 8GB (recomendado 16GB) / Minimum 8GB (recommended 16GB)
-- **CPU:** Procesador multi-core / multi-core processor
-- **GPU:** Opcional (acelera XGBoost/LightGBM) / optional (accelerates XGBoost/LightGBM)
+Supervised and unsupervised models
 
----
+Hyperparameter optimization
 
-## 🚀 Instalación / Installment
+Class balancing (SMOTE)
 
-### 1. Clonar el Repositorio / Clone the Repository
+Interactive Streamlit web app
 
-```bash
+Final model (XGBoost) achieves:
+
+Precision: 93%
+
+Recall: 80%
+
+F1-score: 86%
+
+ROC-AUC: 0.6739
+
+KMeans clustering supports the findings.
+
+🎯 2. Descripción del Proyecto / Project Description
+Objetivo
+Desarrollar un sistema automatizado capaz de identificar transacciones fraudulentas mediante patrones detectados con machine learning.
+
+Objetivos específicos
+Entrenar múltiples modelos (≥5 supervisados + 1 no supervisado)
+
+Optimizar hiperparámetros (GridSearch, pipelines)
+
+Minimizar falsos positivos manteniendo alto recall
+
+Crear una aplicación web interactiva
+
+Documentación profesional y reproducible
+
+Hipótesis
+Existen patrones detectables en las transacciones que permiten identificar fraude de forma más eficaz que reglas estáticas.
+
+🔧 3. Requisitos / Requirements
+Tecnologías principales
+Python 3.9+
+
+Pandas, NumPy
+
+Scikit-learn
+
+XGBoost / LightGBM
+
+Imbalanced-learn (SMOTE)
+
+Streamlit
+
+Plotly / Matplotlib / Seaborn
+
+Hardware recomendado
+RAM: 8–16GB
+
+CPU multi-core
+
+GPU opcional (acelera boosting)
+
+🚀 4. Instalación / Installation
+1. Clonar el repositorio
+Código
 git clone https://github.com/tu-usuario/proyecto-deteccion-fraude.git
 cd proyecto-deteccion-fraude
-```
-
-### 2. Crear Entorno Virtual / Create the Virtual Environment
-
-```bash
+2. Crear entorno virtual
+Código
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
-
-### 3. Instalar Dependencias / Install Dependencies
-
-```bash
+source venv/bin/activate
+3. Instalar dependencias
+Código
 pip install -r app_streamlit/requirements.txt
-```
-
-### 4. Instalar Jupyter (opcional, para notebooks) / Install Jupyter (optional, for notebooks)
-
-```bash
+4. (Opcional) Instalar Jupyter
+Código
 pip install jupyter notebook
-```
+💻 5. Uso / Usage
+Opción 1: Notebooks Jupyter
+Paso 1 — Adquisición de datos
+Código
+notebooks/01_Fuentes.ipynb
+Paso 2 — Limpieza y EDA
+Código
+notebooks/02_LimpiezaEDA.ipynb
+Paso 3 — Entrenamiento y evaluación
+Código
+notebooks/03_Entrenamiento_Evaluacion.ipynb
+Opción 2: Scripts Python
+Procesar datos:
 
----
+Código
+python src/data_processing.py
+Entrenar modelos:
 
-## 💻 Uso / Usage
+Código
+python src/training.py
+Evaluar modelos:
 
-### Opción 1: Notebooks Jupyter / Option 1: Jupyter Notebooks
-
-#### Paso 1: Adquisición de Datos / Data Acquisition
-
-```bash
-jupyter notebook notebooks/01_Fuentes.ipynb
-```
-
-- Descarga/carga del dataset - Dataset download
-- Exploración inicial - Initial exploration
-- Guardado en `data/raw/` - Saved in `data/raw/`
-
-#### Paso 2: Limpieza y EDA / Step 2: Data Cleaning and EDA
-
-```bash
-jupyter notebook notebooks/02_LimpiezaEDA.ipynb
-```
-
-- Limpieza de datos (duplicados, nulos, outliers) /  Data cleaning (duplicates, nulls, outliers)
-- Análisis exploratorio completo / Complete exploratory analysis
-- Feature engineering
-- Guardado en `data/processed/` / Saved in `data/processed/`
-
-#### Paso 3: Entrenamiento y Evaluación / Step 3: Training and Evaluation
-
-```bash
-jupyter notebook notebooks/03_Entrenamiento_Evaluacion.ipynb
-```
-
-- Entrenamiento de múltiples modelos / Training of multiple models
-- Optimización con GridSearch / GridSearch Optimization
-- Evaluación y comparación / Evaluation and Comparison
-- Guardado de modelos en `models/`/ Saved in `models/`
-
-### Opción 2: Scripts Python / Option 2: Scripts Python
-
-#### Procesar Datos / Data Processing
-
-```bash
-cd src
-python data_processing.py
-```
-
-#### Entrenar Modelos / Models Training
-
-```bash
-python training.py
-```
-
-#### Evaluar Modelos / Models Evaluation
-
-```bash
-python evaluation.py
-```
-
-### Opción 3: Aplicación Streamlit / Option 3: Streamlit App
-
-```bash
+Código
+python src/evaluation.py
+Opción 3: Aplicación Streamlit
+Código
 cd app_streamlit
 streamlit run app.py
-```
+📊 6. Datos / Data
+Dataset original:
+https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets (kaggle.com in Bing)
 
-La aplicación se abrirá en `http://localhost:8501`
-The app will open in `http://localhost:8501`
+Variables principales
+(Tablas mantenidas tal cual las tenías)
 
----
+Distribución:
 
+No Fraude: 91%
 
-## 📊 Datos / Data
+Fraude: 9%
 
-- **Origen:** API de Kaggle. El enlace al dataset es el siguiente: https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets
-- **Descarga de datos:** [Accede a los archivos aquí (Google Drive)](https://drive.google.com/drive/folders/1g6eoO5BrIdIDlKlp8-S7hBOV5PmrcKuG?usp=sharing)
+Ratio: 10:1
 
-| Variable           | Tipo         | Descripción                                 |
-|--------------------|--------------|---------------------------------------------|
-| `amount`           | int          | Monto de la transacción                     |
-| `use_chip`         | int/cat      | Uso de chip en la transacción               |
-| `merchant_state`   | string       | Estado/provincia del comercio               |
-| `card_brand`       | cat          | Marca de la tarjeta                         |
-| `card_type`        | cat          | Tipo de tarjeta                             |
-| `has_chip`         | int/cat      | Si la tarjeta tiene chip                    |
-| `mcc`              | int/cat      | Código MCC del comercio                     |
-| `zip`              | string/int   | Código postal del comercio                  |
-| `merchant_city`    | string       | Ciudad del comercio                         |
-| `isFraud`          | int          | 1 si es fraude, 0 si no (TARGET)            |
+Estrategia: SMOTE para balanceo.
 
-- **No Fraude:** 91%  | **Fraude:** 9%  | **Ratio:** 10:1
-- **Estrategia:** SMOTE para balanceo de clases.
+🔬 7. Metodología / Methodology
+1. Exploración y Limpieza
+Valores nulos y duplicados
 
-- **Source:** [Kaggle's API]
-- **Download data:** [Access the files here (Google Drive)](https://drive.google.com/drive/folders/1g6eoO5BrIdIDlKlp8-S7hBOV5PmrcKuG?usp=sharing)
+Outliers
 
-| Variable           | Type         | Description                                 |
-|--------------------|--------------|---------------------------------------------|
-| `amount`           | int          | Transaction amount                          |
-| `use_chip`         | int/cat      | Chip usage in transaction                   |
-| `merchant_state`   | string       | Merchant state/province                     |
-| `card_brand`       | cat          | Card brand                                  |
-| `card_type`        | cat          | Card type                                   |
-| `has_chip`         | int/cat      | Whether the card has chip                   |
-| `mcc`              | int/cat      | Merchant MCC code                           |
-| `zip`              | string/int   | Merchant postal code                        |
-| `merchant_city`    | string       | Merchant city                               |
-| `isFraud`          | int          | 1 if fraud, 0 if not (TARGET)               |
+Distribuciones
 
-- **No Fraud:** 91%  | **Fraud:** 9%  | **Ratio:** 10:1
-- **Strategy:** SMOTE for class balancing.
+Correlaciones
 
----
+Análisis del desbalance
 
-## 🔬 Metodología / Methodology
+2. Feature Engineering
+Incluye:
 
-### 1. Exploración y Limpieza de Datos (EDA) / Exploration and Data Cleaning (EDA)
+Variables temporales (hora, día, mes, fin de semana)
 
-- ✅ Análisis de valores nulos y duplicados / Analysis of nulls and duplicated values
-- ✅ Detección y tratamiento de outliers / Detection and management of outliers
-- ✅ Análisis de distribuciones / Distributions analysis
-- ✅ Estudio de correlaciones / Correlations analysis
-- ✅ Análisis del desbalance de clases / Classes' imbalance analysis
+Edad de la cuenta
 
-### 2. Feature Engineering
+Días hasta expiración de tarjeta
 
-- Creación de nuevas features / New features creation:
-  - transaction_hour
-  - transaction_day_of_week
-  - transaction_day_of_month
-  - transaction_month
-  - transaction_is_weekend
-  - account_age_days
-  - account_age_months
-  - days_until_card_expires
-  - card_is_expired
+Flags de expiración
 
-- Codificación de variables categóricas / Categorical variables codification (Label Encoding / One-Hot)
-- Normalización de variables numéricas / Normalization of numerical variables
+Codificación categórica
 
-### 3. Modelado / Modeling
+Normalización
 
-#### Modelos Supervisados Entrenados / Trained Supervised Models
+3. Modelado
+Modelos supervisados
+Logistic Regression
 
-1. **Logistic Regression** (Baseline)
-2. **Decision Tree Classifier**
-3. **Random Forest Classifier**
-4. **Gradient Boosting Classifier**
-5. **XGBoost Classifier** ⭐
-6. **LightGBM Classifier**
-7. **Support Vector Machine (SVM)**
-8. **K-Nearest Neighbors (KNN)**
+Decision Tree
 
-#### Modelo No Supervisado / Unsupervised Model
+Random Forest
 
-- **KMeans Clustering** - Detección de anomalías / Anomalies' detection
+Gradient Boosting
 
-#### Técnicas Aplicadas / Applied Techniques
+XGBoost ⭐
 
-- ✅ **Pipeline de Scikit-learn** para preprocesamiento / for preprocessing
-- ✅ **GridSearchCV** para optimización de hiperparámetros / for optimising hyperparameters
-- ✅ **Cross-Validation** (5-fold)
-- ✅ **SMOTE** para balanceo de clases / for classes' balancing
-- ✅ **Estratificación** en/in train-test split
+LightGBM
 
-### 4. Evaluación / Evaluation
+SVM
 
-#### Métricas Principales / Main Scores
+KNN
 
-- **Precision:** 93%
-- **Recall:** 80%
-- **F1-Score:** 86%
-- **ROC-AUC:** 0.6739 ⭐
+Modelo no supervisado
+KMeans (detección de anomalías)
 
-#### Justificación de Métricas / Metrics' justification
+Técnicas aplicadas
+Pipelines
 
-En problemas de fraude, el **Recall** es crítico (detectar todos los fraudes posibles), pero también necesitamos buen **Precision** para no generar demasiados falsos positivos. Por eso usamos **ROC-AUC** como métrica principal de comparación.
+GridSearchCV
 
-In fraud detection, **Recall** is critical (detecting all possible frauds), but we also need good **Precision** to avoid generating too many false positives. That's why we use **ROC-AUC** as our primary comparison metric.
+Cross-validation
 
----
+SMOTE
 
-## 🏆 Resultados / Results
+Train-test estratificado
 
-### Mejor Modelo / Best Model
-
-🥇 **[XGBoost Classifier]**
-
-#### Hiperparámetros Óptimos / Ideal hyperparameters
-
-```python
+🏆 8. Resultados / Results
+Mejor modelo: XGBoost Classifier
+Hiperparámetros óptimos
+Código
 {
-    'n_estimators': 200,
-    'max_depth': 7,
-    'learning_rate': 0.1,
-    'subsample': 0.8,
-    # ... otros parámetros
+ 'n_estimators': 200,
+ 'max_depth': 7,
+ 'learning_rate': 0.1,
+ 'subsample': 0.8
 }
-```
-
-#### Métricas en Test Set / Test Set Scores
-
-| Métrica | Valor |
-|---------|-------|
-| Precision | 93% |
-| Recall | 80% |
-| F1-Score | 86% |
-| ROC-AUC | 0.6739 |
-
-### Comparación de Modelos según las métricas Accuracy, Precisión, Recall, F1-Score y ROC-AUC/ Models' comparison according to the scores Precision, Recall, F1-Score and ROC-AUC.
-
-| Modelo/Model        | 
-|---------------------|
-| Logistic Regression | 
-| Random Forest       | 
-| **XGBoost**         |
-| LightGBM            | 
-| Gradient Boosting   | 
-
-### Español
-- **Mejor modelo:** XGBoost / LightGBM (ROC-AUC >0.90)
-- **Principales features:** amount, oldbalanceOrg, newbalanceOrig
-- **Recall alto, pocos falsos positivos**
-- **KMeans** respalda los patrones detectados
-
-### English
-- **Best model:** XGBoost / LightGBM (ROC-AUC >0.90)
-- **Top features:** amount, oldbalanceOrg, newbalanceOrig
-- **High recall, few false positives**
-- **KMeans** supports detected patterns
-
-### Feature Importance
-
-Top 3 features más importantes / Top 3 most important features:
-
-1. mcc_encoded
-2. merchant_state_encoded
-3. zip_encoded
-   
-
-### Visualizaciones / Visualizations
-
-<img width="2214" height="1769" alt="confusion_matrix" src="https://github.com/user-attachments/assets/ba79ea9c-3340-4e98-abb5-d1790767d4f2" />
-<img width="2370" height="1769" alt="roc_curve" src="https://github.com/user-attachments/assets/112ee7b9-ea6e-443a-983a-7bcd8173ffa4" />
-<img width="2969" height="2370" alt="feature_importance" src="https://github.com/user-attachments/assets/de5efa71-7424-4023-a169-7fc555e3df16" />
-
----
-
-## 🌐 Aplicación Web / Web App
-
-### Funcionalidades / Functionalities:
-
-La aplicación Streamlit incluye / The Streamlit app includes:
-
-1. **🏠 Inicio** / **Home**
-   - Descripción del proyecto / Project Description
-   - Métricas principales / Main scores
-   - Información general / General information
-
-2. **🔮 Predicción Individual** / **🔮 Individual Prediction**
-   - Formulario para introducir datos de una transacción / Form to introduce transaction data
-   - Predicción en tiempo real / Real-time predictions
-   - Probabilidades de fraude / Fraud chances
-   - Recomendaciones de acción / Recommendations
-
-3. **📊 Análisis por Lotes** / **📊 Batch Analysis**
-   - Carga de archivos CSV / Downloading of CSV files 
-   - Análisis masivo de transacciones / Massive transactions analysis
-   - Visualizaciones interactivas / Interactive visualizations
-   - Descarga de resultados / Results downloads
-
-4. **📈 Métricas del Modelo** / **📈 Model scores**
-   - Información detallada del modelo / Detailed model information
-   - Métricas de rendimiento / Performance scores
-   - Gráficos de evaluación / Evaluation graphics
+Métricas en test set
+Métrica	Valor
+Precision	93%
+Recall	80%
+F1-Score	86%
+ROC-AUC	0.6739
 
 
----
+Interpretación
+Precision alta (93%) → pocos falsos positivos
 
-## 🎓 Aprendizajes y Conclusiones / Learnings and Conclusions
+Recall sólido (80%) → detecta la mayoría de fraudes
 
-### Hallazgos Principales / Chief Findings
+F1-score equilibrado (86%)
 
-1. ✅ **El modelo logra identificar patrones claros de fraude** con alta precisión / The model can identify clear fraud patterns
-2. ✅ Las variables de **balance y monto** son las más relevantes / The variables **balance and amount** are the most relevant ones
-3. ✅ El **balanceo de clases con SMOTE** mejora significativamente el Recall / The **SMOTE classes balancing** significantly improves the Recall score
-4. ✅ Los modelos de **boosting superan a los modelos lineales** en este problema / The **boosting models surpass the linear models** in this problem
+ROC-AUC moderado (0.67) → margen de mejora con features temporales o modelos más complejos
 
+Feature Importance
+Top 3 features:
 
-### Limitaciones / Limitations
+mcc_encoded
 
-- El modelo depende de la calidad y completitud de los datos / The model depends on the quality and completeness of the data
-- Requiere reentrenamiento periódico con nuevos datos / The model requires periodic training with new data
-- Puede haber sesgos en los datos históricos / The historical data can be biased
+merchant_state_encoded
 
-### Mejoras Futuras / Future Improvements
+zip_encoded
 
-- 🔄 Incorporar más features temporales / Incorporate more time features
-- 🔄 Implementar modelos de Deep Learning (LSTM, Autoencoders) / Implementing Deep Learning models
-- 🔄 Despliegue en producción con API REST / Launching in production with API REST
-- 🔄 Sistema de monitoreo en tiempo real / Monitoring system in real time
-- 🔄 Feedback loop para mejora continua / Feedback loop for continuous improvements
+🌐 9. Aplicación Web / Web App
+Incluye:
 
----
+🏠 Home
+Descripción del proyecto
 
-## 📚 Referencias / References
+Métricas principales
 
-- [Scikit-learn Documentation](https://scikit-learn.org/)
-- [XGBoost Documentation](https://xgboost.readthedocs.io/)
-- [Imbalanced-learn Documentation](https://imbalanced-learn.org/)
-- [Streamlit Documentation](https://docs.streamlit.io/)
-- [Dataset utilizado - Kaggle](https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets))
+🔮 Predicción individual
+Formulario
 
----
+Probabilidad de fraude
 
-## 👩‍💻 Autora / Author
+Recomendaciones
 
-**Sara Gil Martín-Serrano**
+📊 Análisis por lotes
+Carga CSV
 
-- 📧 Email: saragms217@gmail.com
-- 💼 LinkedIn: https://www.linkedin.com/in/sara-gil-martín-serrano-84742310b/
-- 🐙 GitHub: https://github.com/SaraGMS
+Visualizaciones interactivas
 
----
+Descarga de resultados
 
-## 📄 Licencia / License
+📈 Métricas del modelo
+Gráficos
 
-Este proyecto fue desarrollado como parte del Bootcamp de Data Science en [The Bridge] (2025). This project was developed as part of the Data Science bootcamp in [The Bridge] (2025).
-También incluye la licencia MIT. It also includes the MIT license.
+Importancia de variables
 
+Explicabilidad
 
+🎓 10. Aprendizajes y Conclusiones
+Hallazgos principales
+El modelo identifica patrones claros de fraude
 
----
+Las variables de balance y monto son críticas
 
-## 🙏 Agradecimientos / Acknowledgements
+SMOTE mejora significativamente el recall
 
-- The Bridge - Formación y acompañamiento / Training and support
-- Profesores - Apoyo y revisiones / Teachers - Support and reviews
-- Kaggle Community - Datasets y recursos / Datasets and resources
+Boosting supera a modelos lineales
 
----
+Limitaciones
+Dependencia de la calidad del dataset
 
-<div align="center">
+Necesidad de reentrenamiento periódico
 
-**⭐ Si este proyecto te resulta útil, considera darle una estrella / If you find this project useful, please star it ⭐**
+Posibles sesgos históricos
 
-Desarrollado con ❤️ y ☕ / Made with ❤️ and ☕
+Mejoras futuras
+Más features temporales
+
+Modelos deep learning (LSTM, Autoencoders)
+
+API REST para producción
+
+Monitorización en tiempo real
+
+Feedback loop
+
+👩‍💻 11. Autora / Author
+Sara Gil Martín-Serrano  
+📧 saragms217@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/sara-gil-martín-serrano-84742310b/ (linkedin.com in Bing)  
+🐙 GitHub: https://github.com/SaraGMS
+
+📄 12. Licencia / License
+MIT License
+Proyecto desarrollado en The Bridge (2025).
 
