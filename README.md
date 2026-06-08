@@ -336,12 +336,18 @@ Monitorización en tiempo real
 Feedback loop
 
 👩‍💻 11. Autora / Author
+
 Sara Gil Martín-Serrano  
-📧 saragms217@gmail.com
-💼 LinkedIn: https://www.linkedin.com/in/sara-gil-martín-serrano-84742310b/ (linkedin.com in Bing)  
+
+📧 sgilmartinserrano@gmail.com
+
+💼 LinkedIn: https://www.linkedin.com/in/sara-gil-martín-serrano-84742310b/ (linkedin.com in Bing)
+
 🐙 GitHub: https://github.com/SaraGMS
 
 📄 12. Licencia / License
+
 MIT License
+
 Proyecto desarrollado en The Bridge (2025).
 
